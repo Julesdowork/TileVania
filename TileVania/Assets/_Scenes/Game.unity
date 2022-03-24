@@ -7715,6 +7715,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 346793975, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951979071129650454, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6293293602791256666, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
       propertyPath: m_Name
       value: Ginger (Player)
