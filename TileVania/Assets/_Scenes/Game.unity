@@ -329,7 +329,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1007270873
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -607,7 +607,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -233106499
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -897,7 +897,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1622716221
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
@@ -23471,7 +23471,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1568722507
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -23659,6 +23659,8 @@ MonoBehaviour:
     m_ParentHash: 756556552
   - m_Hash: -725336713
     m_ParentHash: 756556552
+  - m_Hash: -1546996312
+    m_ParentHash: 756556552
 --- !u!1 &1263153427
 GameObject:
   m_ObjectHideFlags: 0
@@ -23734,7 +23736,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1007270873
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
@@ -31321,7 +31323,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1470178941
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
@@ -31899,7 +31901,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1219313663
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1258663176, guid: edae3e1da104aae418a5f732b73b5c30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -31973,30 +31975,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 346793976, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
-      propertyPath: m_Size.x
-      value: 0.4807616
-      objectReference: {fileID: 0}
-    - target: {fileID: 346793976, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
-      propertyPath: m_Size.y
-      value: 0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 346793976, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.030000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 346793976, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.060000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 5909943020578636662, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 654eb444ce7ada54f986e9b35d4a94f7, type: 2}
-    - target: {fileID: 5951979071129650454, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
-      propertyPath: jumpSpeed
-      value: 22
-      objectReference: {fileID: 0}
     - target: {fileID: 6293293602791256666, guid: c3768598e3183e64fad810bc7c44bad9, type: 3}
       propertyPath: m_Name
       value: Ginger (Player)

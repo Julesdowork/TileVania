@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed;
     [SerializeField] float climbSpeed;
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
+    [SerializeField] Transform gunTransform;
+    [SerializeField] GameObject bulletPrefab;
     float startingGravity = 8f;
     bool isAlive = true;
 
@@ -56,6 +58,14 @@ public class PlayerMovement : MonoBehaviour
             // do stuff
             myRigidbody.velocity += new Vector2(0, jumpSpeed);
         }
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (!isAlive)
+            return;
+        
+        Instantiate(bulletPrefab, gunTransform.position, Quaternion.identity);
     }
 
     private void Run()
