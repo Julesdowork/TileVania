@@ -119,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
                 // Fly to the right
                 myRigidbody.velocity = new Vector2(deathKick.x, deathKick.y);
             }
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }
