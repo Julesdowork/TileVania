@@ -9,21 +9,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed;
     [SerializeField] float jumpSpeed;
     [SerializeField] float climbSpeed;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
     float startingGravity = 8f;
     bool isAlive = true;
 
     Rigidbody2D myRigidbody;
     Animator animator;
-    CapsuleCollider2D myBodyCollider;
-    BoxCollider2D myFeetCollider;
+    CapsuleCollider2D bodyCollider;
+    BoxCollider2D feetCollider;
 
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.gravityScale = startingGravity;
         animator = GetComponent<Animator>();
-        myBodyCollider = GetComponent<CapsuleCollider2D>();
-        myFeetCollider = GetComponent<BoxCollider2D>();
+        bodyCollider = GetComponent<CapsuleCollider2D>();
+        feetCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -46,8 +47,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isAlive)
             return;
-            
-        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+
+        if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
             return;
         
         if (value.isPressed)
@@ -77,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ClimbLadder()
     {
-        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Climbable")))
+        if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Climbable")))
         {
             myRigidbody.gravityScale = startingGravity;
             animator.SetBool("IsClimbing", false);
@@ -94,9 +95,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Die()
     {
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        if (bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
         {
             isAlive = false;
+            animator.SetTrigger("Dying");
+            if (moveInput.x > 0)
+            {
+                // Fly to the left
+                myRigidbody.velocity = new Vector2(-deathKick.x, deathKick.y);
+            }
+            else
+            {
+                // Fly to the right
+                myRigidbody.velocity = new Vector2(deathKick.x, deathKick.y);
+            }
         }
     }
 }
