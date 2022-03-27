@@ -136,3 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinSound: {fileID: 8300000, guid: b22314575e135554e848d270c7bff972, type: 3}
+  points: 100
